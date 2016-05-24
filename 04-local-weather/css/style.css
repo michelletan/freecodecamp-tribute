@@ -1,0 +1,23 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+  font-family: 'Raleway', sans-serif;
+}
+
+.temperature {
+  font-family: 'Raleway', sans-serif;
+  font-size: 40px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.btn-group {
+  margin-bottom: 15px;
+}
+
+.fa-twitter-square {
+  margin-top: 8px;
+  font-size: 30px;
+}
