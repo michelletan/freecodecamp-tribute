@@ -1,11 +1,11 @@
 ## Synopsis
 
-This repository holds all my submissions for the FreeCodeCamp Full Stack Web Certification. These are uploaded as they are completed on [my CodePen](http://codepen.io/michelletan/ "Link to my CodePen profile").
+This repository holds all my submissions for the FreeCodeCamp Full Stack Web Certification. These are uploaded as they are completed on [my CodePen](http://codepen.io/michelletan/ "Link to my CodePen profile"). Each project folder also contains a link to the CodePen for a preview.
 
 ## Project List
 
-1. [Tribute for Dr Norman Borlaud]( "Link to repo folder") - HTML/CSS
-2. [Personal Portfolio]( "Link to repo folder") - HTML/CSS
-3. [Random Design Quote Generator] ( "Link to repo folder") - AngularJS/QuotesOnDesign API
+1. [Tribute for Dr Norman Borlaud](https://github.com/michelletan/freecodecampwork/tree/master/01-tribute-page "Link to repo folder") - HTML/CSS
+2. [Personal Portfolio](https://github.com/michelletan/freecodecampwork/tree/master/02-personal-portfolio-page "Link to repo folder") - HTML/CSS
+3. [Random Design Quote Generator] (https://github.com/michelletan/freecodecampwork/tree/master/03-random-quote-generator "Link to repo folder") - AngularJS/QuotesOnDesign API
 4. [Local Weather App] ( "Link to repo folder") - AngularJS/OpenWeather API
 
