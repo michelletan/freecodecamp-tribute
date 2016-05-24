@@ -1,0 +1,56 @@
+body {
+  font-family: 'Open Sans', san-serif;  
+}
+
+header {
+  margin-bottom: 20px;
+}
+
+footer {
+  margin-top: 10px;
+  padding: 10px;
+}
+
+h1 {
+  font-family: 'Raleway', san-serif;
+  font-weight: 700;
+  font-size: 56px;
+}
+
+blockquote {
+  border-left: none;
+  font-size: 24px;
+}
+
+cite {
+  font-size: 14px;
+}
+
+.subtitle {
+  margin-top: -15px;
+  font-family: 'Raleway', san-serif;
+  font-weight: 400;
+  font-size: 18px;
+  font-style: italic;
+}
+
+.caption {
+  padding: 10px 10px 0px 10px;
+}
+
+.subheading {
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0px 0px 10px 0px;
+}
+
+.well {
+  min-height: 300px;
+  height: 300px;
+  overflow-y: scroll;
+}
+
+#photo {
+  margin-bottom: 40px;
+}

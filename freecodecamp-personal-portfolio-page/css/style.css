@@ -1,0 +1,150 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  padding-top: 10px;
+  padding-bottom: 50px;
+  border-bottom: 8px solid skyblue;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 24px;
+  padding: 0px 0px 7px 0px;
+  margin-bottom: 20px;
+}
+
+h2::after {
+  content: ""; 
+  background: lightblue; 
+  width: 30%; 
+  height: 2px;
+  margin: 5px auto 0px auto;
+  display: block;
+}
+
+section {
+  padding-top: 10px;
+}
+
+.img-profile {
+  width: 150px;
+  height: 150px;
+}
+
+.portfolio-item {
+  margin-bottom: 10px;
+}
+
+.skills-item {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.skills-item span {
+  font-size: 48px;
+  margin-bottom: 8px;
+  color: black;
+  -webkit-transition: color 0.3s;
+  -moz-transition: color 0.3s;
+  -ms-transition: color 0.3s;
+  -o-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+form {
+  padding-top: 10px;  
+}
+
+.btn-default {
+  font-family: 'Raleway', sans-serif;
+}
+
+.control-label {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+}
+
+.separator {
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  padding-bottom: 15px;
+}
+
+.social-icons {
+  font-size: 50px;
+}
+
+.social-icons span {
+  color: grey;
+  opacity: 0.5;
+  -webkit-transition: opacity 0.3s ease-in, color 0.3s;
+  -moz-transition: opacity 0.3s ease-in, color 0.3s;
+  -ms-transition: opacity 0.3s ease-in, color 0.3s;
+  -o-transition: opacity 0.3s ease-in, color 0.3s;
+  transition: opacity 0.3s ease-in, color 0.3s;
+}
+
+.social-icons span:hover {
+  opacity: 1;
+}
+
+.fa-linkedin-square:hover {
+  color: #007bb5;
+}
+
+.fa-github-square:hover {
+  color: black;
+}
+
+.fa-google-plus-square:hover {
+  color: #dd4b39;
+}
+
+.fa-html5:hover, .fa-git:hover {
+  color: #ff6600;
+}
+
+.fa-css3:hover {
+  color: #55acee;
+}
+
+.fa-code:hover {
+  color: #fffc00;
+}
+
+.fa-coffee:hover {
+  color: brown;
+}
+
+#content {
+  padding-top: 50px;
+}
+
+.navbar {
+  background-color: white;
+  padding-top: 10px;
+  
+}
+
+#navigation li a {
+  color: grey;
+  padding-bottom: 5px;
+  -webkit-transition: color 0.3s, background-color 0.3s;
+}
+
+#navigation li a:hover {
+  color: skyblue;
+  background-color: white;
+  border-bottom: 2px solid skyblue;
+}

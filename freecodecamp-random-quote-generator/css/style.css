@@ -1,0 +1,28 @@
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+blockquote {
+  border-left: none;
+}
+
+.fa-twitter-square {
+  font-size: 48px;
+  color: black;
+  margin-top: -10px;
+  padding-bottom: 15px;
+  -webkit-transition: color 0.3s;
+  -moz-transition: color 0.3s;
+  -ms-transition: color 0.3s;
+  -o-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.fa-twitter-square:hover {
+  color: #55acee;
+  cursor: pointer;
+}
+
+.credit {
+  margin-top: 15px;
+}

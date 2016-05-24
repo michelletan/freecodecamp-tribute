@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>FreeCodeCamp - Random Quote Generator</title>
+    <script src="https://use.fontawesome.com/46ea274f7c.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Raleway:700,400' rel='stylesheet' type='text/css'>
+<script type="text/javascript" async src="https://platform.twitter.com/widgets.js"></script>
+    
+    
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+
+        <link rel="stylesheet" href="css/style.css">
+
+    
+    
+    
+  </head>
+
+  <body>
+
+    <body ng-app="quoteGeneratorApp">
+  <h1 class="text-center">Random Quote Generator</h1>
+  <div class="container-fluid" ng-controller="quoteCtrl as quote" data-ng-init="randomiseQuote()">
+    <div class="row center-block">
+      <div class="col-xs-2">
+      </div>
+      <div class="col-xs-8 text-center">
+        <blockquote class="text-justify text-primary">
+          <span ng-bind-html="currentQuoteText"></span>
+          <footer class="text-right text-uppercase"><cite>{{currentQuote.title}}</cite></footer>
+      </blockquote>
+        <div class="text-center">
+          <a ng-href="https://twitter.com/intent/tweet?text={{currentQuoteLink}}"><span class="fa fa-twitter-square"></span></a>
+        </div>
+        <button class="btn btn-primary" ng-click="randomiseQuote()">Get Another Quote!</button>
+      </div>
+      <div class="col-xs-2">
+      </div>
+    </div>
+    <div class="credit row text-center">
+      Quotes provided by <a href="http://quotesondesign.com/api-v4-0/">QuotesOnDesign</a>
+    </div>
+  </div>
+</body>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js'></script>
+
+        <script src="js/index.js"></script>
+
+    
+    
+    
+  </body>
+</html>
