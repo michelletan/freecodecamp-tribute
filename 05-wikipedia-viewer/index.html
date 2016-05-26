@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>FreeCodeCamp - Wikipedia Viewer</title>
+    <script src="https://use.fontawesome.com/46ea274f7c.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Raleway:700,400' rel='stylesheet' type='text/css'>
+<script type="text/javascript" async src="https://platform.twitter.com/widgets.js"></script>
+<script language="JavaScript" src="http://www.geoplugin.net/javascript.gp" type="text/javascript"></script>
+    
+    
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+
+        <link rel="stylesheet" href="css/style.css">
+
+    
+    
+    
+  </head>
+
+  <body>
+
+    <body ng-app="wikipediaViewerApp" ng-controller="WikiController as wiki">
+  <div class="container-fluid">
+    <div class="row">
+      <h1 class="text-center text-uppercase">Wikipedia Viewer</h1>
+    </div>
+    <div class="row center-block">
+      <div class="row center-block text-center options-container">
+        <button id="btn-random" class="btn btn-info col-xs-12 col-sm-offset-4 col-sm-4" ng-click="wiki.showRandomArticle()">View Random Article</button>
+        <form name="searchForm" class="form-inline col-xs-12 col-sm-offset-4 col-sm-4">
+          <div class="input-group">
+            <input ng-model="wiki.searchText" class="form-control" type="text" placeholder="Search for an article" required />
+            <span class="input-group-btn">
+            <button ng-click="wiki.showSearch(wiki.searchText)" ng-disabled="searchForm.$invalid" type="submit" class="btn btn-info"><span class="fa fa-search"></span></button>
+            </span>
+          </div>
+        </form>
+      </div>
+      <div ng-show="wiki.isRandomVisible" class="random-container">
+        <div class="row">
+          <div class="intrinsic-container intrinsic-container-4x3">
+            <iframe ng-src="{{wiki.wikiPageUrl}}"></iframe>
+          </div>
+        </div>
+      </div>
+      <div ng-show="wiki.isSearchVisible" class="row search-container">
+        <div class="row">
+          <div class="text-center">{{wiki.results.length}} results shown out of {{wiki.totalHits}}</div>
+          <div ng-repeat="result in wiki.results">
+            <div class="result img-rounded">
+              <h2><a ng-href="http://en.wikipedia.org/wiki/{{result.title}}">{{result.title}}</a></h2>
+              <div ng-bind-html="result.snippet | trustHtml" class="well"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/1.3.2/ui-bootstrap-tpls.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.5.5/angular-sanitize.min.js'></script>
+
+        <script src="js/index.js"></script>
+
+    
+    
+    
+  </body>
+</html>
