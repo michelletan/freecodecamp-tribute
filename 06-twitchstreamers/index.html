@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>FreeCodeCamp - TwitchStreamers</title>
+    <script src="https://use.fontawesome.com/46ea274f7c.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Raleway:700,400' rel='stylesheet' type='text/css'>
+<script type="text/javascript" async src="https://platform.twitter.com/widgets.js"></script>
+<script language="JavaScript" src="http://www.geoplugin.net/javascript.gp" type="text/javascript"></script>
+    
+    
+    <link rel='stylesheet prefetch' href='http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css'>
+
+        <link rel="stylesheet" href="css/style.css">
+
+    
+    
+    
+  </head>
+
+  <body>
+
+    <body ng-app="twitchStreamerApp" ng-controller="TwitchController as twitch">
+  <div layout="column" layout-align="center">
+    <md-toolbar layout="row" layout-align="center start" class="md-whiteframe-z2">
+      <h1>Twitch Streamers</h1>
+    </md-toolbar>
+    <md-content>
+        <md-tabs md-dynamic-height>
+          <md-tab ng-repeat="tab in twitch.tabs" label="{{tab.label}}">
+            <md-content flex layout="column">
+              <md-card ng-repeat="item in twitch.streamers | orderBy: 'stream' | filter: tab.filter" ng-class="{offline: item.status === 'Offline', closed: item.status === 'Does not exist'}" ng-show="tab.isCardShown(item.status)">
+                <md-card-header>
+                  <md-card-header-text>
+                    <span class="md-title"><a ng-href="https://www.twitch.tv/{{item.id}}" target="_blank">{{item.id}}</a></span>
+                    <span class="md-subhead">{{item.status}}</span>
+                  </md-card-header-text>
+                </md-card-header>
+                <img ng-if="item.stream" ng-src="{{item.stream.preview.large}}" class="md-media-md" />
+                <md-card-content ng-if="item.stream">
+                  <p>
+                    {{item.stream.channel.status}}
+                  </p>
+                </md-card-content>
+                <md-card-actions ng-if="item.stream" layout="row" layout-align="start center">
+                  <md-button ng-click="twitch.openStream(item.stream.channel.url)">View Stream</md-button>
+                </md-card-actions>
+              </md-card>
+            </md-content>
+          </md-tab>
+        </md-tabs>
+    </md-content>
+  </div>
+</body>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.5.5/angular-sanitize.min.js'></script>
+<script src='http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js'></script>
+<script src='http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js'></script>
+<script src='http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js'></script>
+<script src='http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js'></script>
+
+        <script src="js/index.js"></script>
+
+    
+    
+    
+  </body>
+</html>

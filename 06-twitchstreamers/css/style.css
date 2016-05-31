@@ -1,0 +1,17 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.offline {
+  background-color: lightgrey;
+}
+
+.closed {
+  background-color: grey;
+}
