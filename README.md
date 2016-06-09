@@ -10,3 +10,5 @@ This repository holds all my submissions for the FreeCodeCamp Full Stack Web Cer
 4. [Local Weather App] (https://github.com/michelletan/freecodecampwork/tree/master/04-local-weather "Link to repo folder") - AngularJS/OpenWeather API
 5. [Wikipedia Viewer] (https://github.com/michelletan/freecodecampwork/tree/master/05-wikipedia-viewer "Link to repo folder") - AngularJS/Wikipedia API
 6. [Twitch Streamers] (https://github.com/michelletan/freecodecampwork/tree/master/06-twitchstreamers "Link to repo folder") - Angular Material/AngularJS/TwitchTV API
+7. [Javascript Calculator] (https://github.com/michelletan/freecodecampwork/tree/master/06-twitchstreamers "Link to repo folder") - Angular Material/AngularJS
+8. [Pomodoro Clock] (https://github.com/michelletan/freecodecampwork/tree/master/08-pomodoro-clock "Link to repo folder") - Angular Material/AngularJS

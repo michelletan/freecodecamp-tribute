@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>FreeCodeCamp - Pomodoro Clock</title>
+    <script src="https://use.fontawesome.com/46ea274f7c.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Raleway:700,400' rel='stylesheet' type='text/css'>
+<script type="text/javascript" async src="https://platform.twitter.com/widgets.js"></script>
+<script language="JavaScript" src="http://www.geoplugin.net/javascript.gp" type="text/javascript"></script>
+    
+    
+    <link rel='stylesheet prefetch' href='http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css'>
+
+        <link rel="stylesheet" href="css/style.css">
+
+    
+    
+    
+  </head>
+
+  <body>
+
+    <body ng-app="pomodoroApp">
+  <div ng-controller="PomodoroController as pomo" ng-cloak>
+    <div layout="column" layout-align="center">
+      <md-content>
+        <md-toolbar layout="row" layout-align="center start" class="md-whiteframe-z2">
+          <h1>Pomodoro Clock</h1>
+        </md-toolbar>
+        <md-content layout-margin>
+          <section layout-padding>
+            <div flex="100" layout="row" layout-xs="column" layout-align="space-around center">
+              <md-progress-circular md-mode="determinate" value="{{model.getTimerProgress()}}" md-diameter="150" class="md-accent" ng-cloak></md-progress-circular>
+            </div>
+            <div layout="column" layout-align="center center">{{model.getIsWorkState() ? 'At Work' : 'On Break'}}</div>
+            <div flex="100" layout="row" layout-align="space-around center" class="timer-display">{{model.getTimerRemaining() | millisecondsToDuration}}</div>
+          </section>
+          <section>
+            <form name="durationForm">
+              <div layout-gt-sm="row">
+                <md-input-container class="md-block" flex-gt-sm>
+                  <label>Work duration (mins)</label>
+                  <input required type="number" ng-model="model.workDuration" name="workDuration" ng-change="model.setWorkDuration(model.workDuration)" ng-disabled="model.getIsTimerRunning()" min="5" max="600" />
+                  <div ng-messages="durationForm.workDuration.$error" multiple md-auto-hide="false">
+                    <div ng-message="required">
+                      Please set the duration of work.
+                    </div>
+                    <div ng-message="min">
+                      You have to work for at least 5 minutes.
+                    </div>
+                    <div ng-message="max">
+                      You can't work more than 10 hours!
+                    </div>
+                  </div>
+                </md-input-container>
+                <md-input-container class="md-block" flex-gt-sm>
+                  <label>Break duration (mins)</label>
+                  <input required type="number" ng-model="model.breakDuration" ng-change="model.setBreakDuration(model.breakDuration)" ng-disabled="model.getIsTimerRunning()" name="breakDuration" min="5" max="600" />
+                  <div ng-messages="durationForm.breakDuration.$error" multiple md-auto-hide="false">
+                    <div ng-message="required">
+                      Please set the duration of your break.
+                    </div>
+                    <div ng-message="min">
+                      Take a break for at least 5 minutes!
+                    </div>
+                    <div ng-message="max">
+                      Don't take a break for more than 10 hours!
+                    </div>
+                  </div>
+                </md-input-container>
+              </div>
+            </form>
+          </section>
+          <section layout="row" layout-align="center center" layout-wrap>
+            <md-button class="md-raised md-primary" ng-click="model.start()" ng-show="model.isStartAvailable()">Start</md-button>
+            <md-button class="md-raised md-warn" ng-click="model.stop()" ng-show="model.isStopAvailable()">Stop</md-button>
+            <md-button class="md-raised" ng-click="model.pause()" ng-show="model.isPauseAvailable()">Pause</md-button>
+            <md-button class="md-raised md-primary" ng-click="model.continue()" ng-show="model.isContinueAvailable()">Continue</md-button>
+            <md-button class="md-raised" ng-click="model.reset()" ng-show="model.isResetAvailable()">Reset</md-button>
+          </section>
+
+        </md-content>
+      </md-content>
+    </div>
+  </div>
+</body>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js'></script>
+<script src='http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js'></script>
+<script src='http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js'></script>
+<script src='http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js'></script>
+<script src='http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js'></script>
+
+        <script src="js/index.js"></script>
+
+    
+    
+    
+  </body>
+</html>
