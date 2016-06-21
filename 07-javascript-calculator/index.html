@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>FreeCodeCamp - Javascript Calculator</title>
+    <script src="https://use.fontawesome.com/46ea274f7c.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Raleway:700,400' rel='stylesheet' type='text/css'>
+<script type="text/javascript" async src="https://platform.twitter.com/widgets.js"></script>
+<script language="JavaScript" src="http://www.geoplugin.net/javascript.gp" type="text/javascript"></script>
+    
+    
+    <link rel='stylesheet prefetch' href='http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css'>
+
+        <link rel="stylesheet" href="css/style.css">
+
+    
+    
+    
+  </head>
+
+  <body>
+
+    <body ng-app="calculatorApp">
+  <div ng-controller="CalculatorController as calc" ng-cloak>
+    <div layout="column" layout-align="center">
+      <md-content>
+        <md-toolbar layout="row" layout-align="center start" class="md-whiteframe-z2">
+          <h1>Calculator</h1>
+        </md-toolbar>
+        <md-content layout="column" layout-margin>
+          <section>
+            <div layout="row" layout-align="end center" class="calc-display">{{calc.display}}</div>
+          </section>
+          <section class="button-container" layout-padding>
+            <md-grid-list md-cols="4" md-row-height="2:1" md-gutter="8px">
+              <md-grid-tile ng-repeat="(index, title) in calc.tiles track by $index" md-rowspan="1" md-colspan="1">
+                <md-button ng-hide="{{title === ''}}" ng-click="calc.processInput(title)" class="md-raised" layout-fill>{{title}}</md-button>
+              </md-grid-tile>
+            </md-grid-list>
+          </section>
+
+        </md-content>
+    </div>
+  </div>
+</body>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js'></script>
+<script src='http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js'></script>
+<script src='http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js'></script>
+<script src='http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js'></script>
+<script src='http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js'></script>
+
+        <script src="js/index.js"></script>
+
+    
+    
+    
+  </body>
+</html>
