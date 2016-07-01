@@ -1,0 +1,21 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+md-grid-list {
+  background-color: black;
+}
+
+.border, md-grid-tile {
+  background-color: white;
+}
+
+.fa {
+  font-size: 4em;
+}

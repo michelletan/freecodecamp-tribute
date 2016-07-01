@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>FreeCodeCamp - Tic Tac Toe</title>
+    <script src="https://use.fontawesome.com/46ea274f7c.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Raleway:700,400' rel='stylesheet' type='text/css'>
+    
+    
+    <link rel='stylesheet prefetch' href='http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css'>
+
+        <link rel="stylesheet" href="css/style.css">
+
+    
+    
+    
+  </head>
+
+  <body>
+
+    <body ng-app="ticTacToeApp">
+  <div ng-controller="TicTacToeController as tic" ng-cloak>
+    <div layout="column" layout-align="center">
+      <md-content>
+        <md-toolbar layout="row" layout-align="center start" class="md-whiteframe-z2">
+          <h1>Tic Tac Toe</h1>
+        </md-toolbar>
+        <md-content layout="column" layout-margin>
+          <div class="border">
+            <md-grid-list md-cols="3" md-row-height="1:1" md-gutter="7px">
+              <md-grid-tile ng-repeat="status in tic.getGrid() track by $index" ng-click="tic.processInput($index)">
+                <span ng-hide="status === null" ng-class="{'fa-times': status, 'fa-circle-o': !status}" class="fa"></span>
+              </md-grid-tile>
+            </md-grid-list>
+          </div>
+          <div ng-show="tic.isGameRunning()" class="label" flex layout="row" layout-align="center center">{{ tic.isPlayerTurn() ? 'Your Turn' : 'Computer'}}</div>
+          <div ng-show="!tic.isGameRunning()" class="label" flex layout="row" layout-align="center center">{{tic.isPlayerWinner() ? 'You Won!' : ''}}</div>
+        </md-content>
+      </md-content>
+    </div>
+  </div>
+</body>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js'></script>
+<script src='http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js'></script>
+<script src='http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js'></script>
+<script src='http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js'></script>
+<script src='http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js'></script>
+
+        <script src="js/index.js"></script>
+
+    
+    
+    
+  </body>
+</html>

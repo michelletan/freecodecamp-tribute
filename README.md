@@ -12,3 +12,4 @@ This repository holds all my submissions for the FreeCodeCamp Full Stack Web Cer
 6. [Twitch Streamers] (https://github.com/michelletan/freecodecampwork/tree/master/06-twitchstreamers "Link to repo folder") - Angular Material/AngularJS/TwitchTV API
 7. [Javascript Calculator] (https://github.com/michelletan/freecodecampwork/tree/master/07-javascript-calculator "Link to repo folder") - Angular Material/AngularJS
 8. [Pomodoro Clock] (https://github.com/michelletan/freecodecampwork/tree/master/08-pomodoro-clock "Link to repo folder") - Angular Material/AngularJS
+9. [Tic Tac Toe] (https://github.com/michelletan/freecodecampwork/tree/master/09-tic-tac-toe "Link to repo folder") - Angular Material/AngularJS
